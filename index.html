@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Will you be my Valentine?</title>
+  <title>Валентинка Дарусику в піпочку</title>
 
   <!-- Confetti library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -41,7 +41,7 @@
     }
 
     .card {
-      width: min(720px, 92vw);
+      width: min(1220px, 92vw);
       padding: 26px 22px;
       background: var(--card);
       backdrop-filter: blur(10px);
@@ -163,6 +163,7 @@
 
       <circle cx="160" cy="130" r="8"/>
       <circle cx="220" cy="130" r="8"/>
+
       <path d="M190 144 C186 144 182 148 182 152
                C182 160 190 164 190 170
                C190 164 198 160 198 152
@@ -170,15 +171,15 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>chloe will you be my valentine?</h1>
+    <h1>❤️❤️❤️❤️Дарусик, будеш моєю ВАЛЕНТИНКОЮ!!!❤️❤️❤️❤️</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
       <button id="noBtn">No</button>
     </section>
 
-    <!-- HINT (ONLY FIRST SECTION) -->
-    <div class="hint" id="hint">“No” seems a bit shy 😈</div>
+    <!-- HINT -->
+    <div class="hint" id="hint">😘😘😘Дарусик жучок😘😘😘</div>
 
     <section class="result" id="result">
       <h2>YAY! 🎉</h2>
@@ -197,11 +198,11 @@
     const result = document.getElementById("result");
     const hint = document.getElementById("hint");
 
-    /* ---------- CONFETTI (FIXED FULL SCREEN) ---------- */
+    /* ---------- CONFETTI ---------- */
     const confettiCanvas = document.getElementById("confettiCanvas");
 
     function resizeConfettiCanvas() {
-      const dpr = Math.max(1, window.devicePixelRatio  1);
+      const dpr = Math.max(1, window.devicePixelRatio || 1);
       confettiCanvas.width = Math.floor(window.innerWidth * dpr);
       confettiCanvas.height = Math.floor(window.innerHeight * dpr);
       confettiCanvas.style.width = "100vw";
@@ -260,7 +261,7 @@
 
       let dx = (b.left + b.width / 2) - px;
       let dy = (b.top + b.height / 2) - py;
-      let mag = Math.hypot(dx, dy)  1;
+      let mag = Math.hypot(dx, dy) || 1;
       dx /= mag;
       dy /= mag;
 
@@ -299,3 +300,5 @@
   </script>
 </body>
 </html>
+
+
